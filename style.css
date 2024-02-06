@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+  --clr-neutral-100: hsl(0, 0%, 98%);
+  --clr-neutral-200: hsl(0, 0%, 41%);
+  --clr-neutral-300: hsl(0, 0%, 8%);
+}
+*{
+font: inherit;
+}
+*, *::before, *::after{
+box-sizing: border-box;
+margin: 0;
+}
+img, video, svg {
+display: block;
+height: auto;
+max-width: 100%;
+}
+body {
+font-family: 'Epilogue', sans-serif;
+min-height: 100dvh
+}
+h1, h2, h3, h4, h5, h6{
+text-wrap: balance;
+}
+p{text-wrap: pretty;}
+
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.navbar{
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__description{
+  margin-top: 1.125rem;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__description .title{
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.hero__description .description{
+  color: var(--clr-neutral-200);
+  padding-inline: 0.5rem;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.97rem;
+}
+.btn{
+  margin-top: 0.6rem;
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  background: var(--clr-neutral-300);
+  border: none;
+  padding: 0.9rem 1.7rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+}
+.sponsors{
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.sponsors img{
+  width: 22%;
+}
