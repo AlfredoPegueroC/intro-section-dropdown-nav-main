@@ -26,29 +26,33 @@
         <img src="./images/logo.svg" alt="logo" />
         <img src="./images/icon-menu.svg" alt="menu" />
       </nav>
-      <section class="hero">
-        <picture>
-          <img src="./images/image-hero-mobile.png" alt="hero-mobile" />
-        </picture>
-
-        <article class="hero__content">
-          <div class="hero__description flex">
-            <h1 class="title">Make remote work</h1>
-            <p class="description">
-              Get your team in sync, no matter your location. Streamline processes, create team
-              rituals, and watch productivity soar.
-            </p>
-            <button class="btn">Learn more</button>
-          </div>
-
-          <div class="sponsors flex">
-            <img src="./images/client-databiz.svg" alt="data" />
-            <img src="./images/client-audiophile.svg" alt="audio" />
-            <img src="./images/client-meet.svg" alt="meet" />
-            <img src="./images/client-maker.svg" alt="maker" />
-          </div>
-        </article>
-      </section>
+      <div class="wrapper">
+        <section class="hero flex">
+          <picture>
+            <source media="(min-width: 64rem)" srcset="./images/image-hero-desktop.png">
+            <img src="./images/image-hero-mobile.png" alt="hero-mobile" />
+          </picture>
+          
+          <article class="hero__content">
+            <div class="hero__description flex">
+              <h1 class="title">Make remote work</h1>
+              <p class="description">
+                Get your team in sync, no matter your location. Streamline processes, create team
+                rituals, and watch productivity soar.
+              </p>
+              <button class="btn">Learn more</button>
+            </div>
+  
+            <div class="sponsors flex">
+              <img src="./images/client-databiz.svg" alt="data" />
+              <img src="./images/client-audiophile.svg" alt="audio" />
+              <img src="./images/client-meet.svg" alt="meet" />
+              <img src="./images/client-maker.svg" alt="maker" />
+            </div>
+          </article>
+        </section>
+      </div>
+      
     </main>
     <!-- <div class="attribution">
       Challenge by
