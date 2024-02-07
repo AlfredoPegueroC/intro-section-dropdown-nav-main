@@ -36,6 +36,10 @@ h6 {
 p {
   text-wrap: pretty;
 }
+button {
+  border: none;
+  background: transparent;
+}
 
 .flex {
   display: flex;
@@ -46,6 +50,9 @@ p {
   padding: 1.5rem;
   justify-content: space-between;
   align-items: center;
+}
+.links {
+  display: none;
 }
 .wrapper {
   display: grid;
@@ -75,16 +82,21 @@ p {
   font-size: 0.97rem;
   max-width: 48rem;
 }
-.btn {
+
+.hero .btn {
   margin-top: 0.6rem;
   cursor: pointer;
   color: var(--clr-neutral-100);
   background: var(--clr-neutral-300);
-  border: none;
   padding: 0.9rem 1.7rem;
   font-weight: 700;
   border-radius: 1rem;
   font-size: 1.125rem;
+}
+.hero .btn:hover {
+  background: var(--clr-neutral-100);
+  color: var(--clr-neutral-300);
+  outline: 1px solid var(--clr-neutral-300);
 }
 .sponsors {
   margin-top: 1.5rem;
@@ -106,6 +118,68 @@ p {
   }
   .navbar {
     padding: 2rem;
+    justify-content: flex-start;
+    /* font-size: 1.125rem; */
+  }
+  .icon-menu {
+    display: none;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .links .login .btn {
+    padding: 0.5rem 1rem;
+  }
+  .links .login .btn:hover {
+    cursor: pointer;
+    outline: 1px solid var(--clr-neutral-300);
+    border-radius: 0.7rem;
+  }
+  .links .login {
+    margin-left: right;
+    gap: 1rem;
+  }
+  .links_container .links_items {
+    position: relative;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .dropdown {
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem;
+    background: white;
+    top: 1.5rem;
+    box-shadow: 2px 7px 32px rgba(0, 0, 0, 0.22);
+  }
+
+  .dropdown.features {
+    opacity: 0;
+    width: 150px;
+    right: 0.5rem;
+    transition: 0.3s ease-out;
+  }
+  .dropdown.company {
+    opacity: 0;
+    width: 100px;
+    left: 0rem;
+    transition: 0.3s ease-out;
+  }
+  .dropdown.active{
+    opacity: 1;
+  }
+  .dropdown_btn{
+    cursor: pointer;
+    align-items: center;
+    gap: 0.5rem;
   }
   .hero__description {
     margin-top: 0;
@@ -127,9 +201,9 @@ p {
     transform: translateY(60%);
     align-self: baseline;
   }
-  .btn{
+  .hero .btn {
     margin-top: 2.5rem;
-    padding:1.125rem 1.8rem;
+    padding: 1.125rem 1.8rem;
   }
   picture {
     transform: translateY(-5%) translateX(4%);

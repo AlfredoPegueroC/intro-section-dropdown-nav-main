@@ -6,10 +6,9 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <!-- <style>
       .attribution {
         font-size: 11px;
@@ -24,15 +23,59 @@
     <main class="container">
       <nav class="navbar flex">
         <img src="./images/logo.svg" alt="logo" />
-        <img src="./images/icon-menu.svg" alt="menu" />
+        <img src="./images/icon-menu.svg" class="icon-menu" alt="menu" />
+        <ul class="links">
+          <div class="links_container flex">
+            <div class="links_items flex">
+              <button class="dropdown_btn flex" id="features">
+                Features <span><img src="./images/icon-arrow-down.svg" alt="" /></span>
+              </button>
+              <div class="dropdown features flex">
+                <div class="dropdown-content flex">
+                  <img src="./images/icon-todo.svg" alt="todo" />
+                  <span>Todo List</span>
+                </div>
+                <div class="dropdown-content flex">
+                  <img src="./images/icon-calendar.svg" alt="todo" />
+                  <span>Calendar</span>
+                </div>
+                <div class="dropdown-content flex">
+                  <img src="./images/icon-reminders.svg" alt="todo" />
+                  <span>Reminders</span>
+                </div>
+                <div class="dropdown-content flex">
+                  <img src="./images/icon-planning.svg" alt="todo" />
+                  <span>Calendar</span>
+                </div>
+              </div>
+            </div>
+            <li class="links_items flex">
+              <button class="dropdown_btn flex" id="company">
+                 Company <span><img src="./images/icon-arrow-down.svg" id="arrow" alt="" /></span>
+              </button>
+             
+              <div class="dropdown company flex">
+                <div class="dropdown-content">History</div>
+                <div class="dropdown-content">Our Team</div>
+                <div class="dropdown-content">Blog</div>
+              </div>
+            </li>
+            <li class="links_items">Carreers</li>
+            <li class="links_items">About</li>
+          </div>
+          <div class="login flex">
+            <button class="btn">Login</button>
+            <button class="btn">Register</button>
+          </div>
+        </ul>
       </nav>
       <div class="wrapper">
         <section class="hero flex">
           <picture>
-            <source media="(min-width: 64rem)" srcset="./images/image-hero-desktop.png">
+            <source media="(min-width: 64rem)" srcset="./images/image-hero-desktop.png" />
             <img src="./images/image-hero-mobile.png" alt="hero-mobile" />
           </picture>
-          
+
           <article class="hero__content">
             <div class="hero__description flex">
               <h1 class="title">Make remote work</h1>
@@ -42,7 +85,7 @@
               </p>
               <button class="btn">Learn more</button>
             </div>
-  
+
             <div class="sponsors flex">
               <img src="./images/client-databiz.svg" alt="data" />
               <img src="./images/client-audiophile.svg" alt="audio" />
@@ -52,8 +95,9 @@
           </article>
         </section>
       </div>
-      
     </main>
+
+    <script src="app.js"></script>
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
